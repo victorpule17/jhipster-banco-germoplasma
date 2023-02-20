@@ -1,0 +1,51 @@
+
+entity Pais {
+	nombrePais String
+}
+
+entity Provincia {
+	nombreProvincia String
+}
+
+entity Canton {
+	nombreCanton String
+}
+
+entity Parroquia {
+	nombreParroquia String
+}
+
+entity Ubicacion{
+	callePrincipal String,
+    calleSecundaria String,
+    latitud String,
+    altitud String,
+    longitud String
+}
+
+entity Planta {
+	nombre String,
+    estado String,
+    uso String
+}
+// defining multiple ManyToOne relationships with comments
+relationship ManyToOne {
+	Planta{ubicacion} to Ubicacion,
+    Ubicacion{parroquia} to Parroquia,
+    Parroquia{canton} to Canton,
+    Canton{provincia} to Provincia,
+    Provincia{pais} to Pais	
+}
+
+// Set pagination options
+// paginate JobHistory, Employee with infinite-scroll
+paginate Pais, Provincia, Canton, Parroquia, Ubicacion, Planta with pagination
+
+// Use Data Transfer Objects (DTO)
+// dto * with mapstruct
+
+// Set service options to all except few
+// service all with serviceImpl except Employee, Job
+
+// Set an angular suffix
+// angularSuffix * with mySuffix
