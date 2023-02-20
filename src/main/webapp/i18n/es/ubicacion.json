@@ -1,0 +1,29 @@
+{
+  "jhipsterBancoGermoplasmaApp": {
+    "ubicacion": {
+      "home": {
+        "title": "Ubicacions",
+        "refreshListLabel": "Refrescar lista",
+        "createLabel": "Crear nuevo Ubicacion",
+        "createOrEditLabel": "Crear o editar Ubicacion",
+        "notFound": "Ningún Ubicacions encontrado"
+      },
+      "created": "Un nuevo Ubicacion ha sido creado con el identificador {{ param }}",
+      "updated": "Un Ubicacion ha sido actualizado con el identificador {{ param }}",
+      "deleted": "Un Ubicacion ha sido eliminado con el identificador {{ param }}",
+      "delete": {
+        "question": "¿Seguro que quiere eliminar Ubicacion {{ id }}?"
+      },
+      "detail": {
+        "title": "Ubicacion"
+      },
+      "id": "ID",
+      "callePrincipal": "Calle Principal",
+      "calleSecundaria": "Calle Secundaria",
+      "latitud": "Latitud",
+      "altitud": "Altitud",
+      "longitud": "Longitud",
+      "parroquia": "Parroquia"
+    }
+  }
+}

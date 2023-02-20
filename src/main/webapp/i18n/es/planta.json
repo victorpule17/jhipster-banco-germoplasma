@@ -1,0 +1,27 @@
+{
+  "jhipsterBancoGermoplasmaApp": {
+    "planta": {
+      "home": {
+        "title": "Plantas",
+        "refreshListLabel": "Refrescar lista",
+        "createLabel": "Crear nuevo Planta",
+        "createOrEditLabel": "Crear o editar Planta",
+        "notFound": "Ningún Plantas encontrado"
+      },
+      "created": "Un nuevo Planta ha sido creado con el identificador {{ param }}",
+      "updated": "Un Planta ha sido actualizado con el identificador {{ param }}",
+      "deleted": "Un Planta ha sido eliminado con el identificador {{ param }}",
+      "delete": {
+        "question": "¿Seguro que quiere eliminar Planta {{ id }}?"
+      },
+      "detail": {
+        "title": "Planta"
+      },
+      "id": "ID",
+      "nombre": "Nombre",
+      "estado": "Estado",
+      "uso": "Uso",
+      "ubicacion": "Ubicacion"
+    }
+  }
+}

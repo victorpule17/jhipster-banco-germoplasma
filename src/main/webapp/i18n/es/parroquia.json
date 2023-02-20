@@ -1,0 +1,25 @@
+{
+  "jhipsterBancoGermoplasmaApp": {
+    "parroquia": {
+      "home": {
+        "title": "Parroquias",
+        "refreshListLabel": "Refrescar lista",
+        "createLabel": "Crear nuevo Parroquia",
+        "createOrEditLabel": "Crear o editar Parroquia",
+        "notFound": "Ningún Parroquias encontrado"
+      },
+      "created": "Un nuevo Parroquia ha sido creado con el identificador {{ param }}",
+      "updated": "Un Parroquia ha sido actualizado con el identificador {{ param }}",
+      "deleted": "Un Parroquia ha sido eliminado con el identificador {{ param }}",
+      "delete": {
+        "question": "¿Seguro que quiere eliminar Parroquia {{ id }}?"
+      },
+      "detail": {
+        "title": "Parroquia"
+      },
+      "id": "ID",
+      "nombreParroquia": "Nombre Parroquia",
+      "canton": "Canton"
+    }
+  }
+}

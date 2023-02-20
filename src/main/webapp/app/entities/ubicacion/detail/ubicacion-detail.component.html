@@ -1,0 +1,54 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <div *ngIf="ubicacion">
+      <h2 data-cy="ubicacionDetailsHeading"><span jhiTranslate="jhipsterBancoGermoplasmaApp.ubicacion.detail.title">Ubicacion</span></h2>
+
+      <hr />
+
+      <jhi-alert-error></jhi-alert-error>
+
+      <jhi-alert></jhi-alert>
+
+      <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="global.field.id">ID</span></dt>
+        <dd>
+          <span>{{ ubicacion.id }}</span>
+        </dd>
+        <dt><span jhiTranslate="jhipsterBancoGermoplasmaApp.ubicacion.callePrincipal">Calle Principal</span></dt>
+        <dd>
+          <span>{{ ubicacion.callePrincipal }}</span>
+        </dd>
+        <dt><span jhiTranslate="jhipsterBancoGermoplasmaApp.ubicacion.calleSecundaria">Calle Secundaria</span></dt>
+        <dd>
+          <span>{{ ubicacion.calleSecundaria }}</span>
+        </dd>
+        <dt><span jhiTranslate="jhipsterBancoGermoplasmaApp.ubicacion.latitud">Latitud</span></dt>
+        <dd>
+          <span>{{ ubicacion.latitud }}</span>
+        </dd>
+        <dt><span jhiTranslate="jhipsterBancoGermoplasmaApp.ubicacion.altitud">Altitud</span></dt>
+        <dd>
+          <span>{{ ubicacion.altitud }}</span>
+        </dd>
+        <dt><span jhiTranslate="jhipsterBancoGermoplasmaApp.ubicacion.longitud">Longitud</span></dt>
+        <dd>
+          <span>{{ ubicacion.longitud }}</span>
+        </dd>
+        <dt><span jhiTranslate="jhipsterBancoGermoplasmaApp.ubicacion.parroquia">Parroquia</span></dt>
+        <dd>
+          <div *ngIf="ubicacion.parroquia">
+            <a [routerLink]="['/parroquia', ubicacion.parroquia.id, 'view']">{{ ubicacion.parroquia.id }}</a>
+          </div>
+        </dd>
+      </dl>
+
+      <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+        <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Volver</span>
+      </button>
+
+      <button type="button" [routerLink]="['/ubicacion', ubicacion.id, 'edit']" class="btn btn-primary">
+        <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Editar</span>
+      </button>
+    </div>
+  </div>
+</div>
