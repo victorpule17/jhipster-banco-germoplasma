@@ -1,0 +1,96 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+      <h2
+        id="jhi-ubicacion-heading"
+        data-cy="UbicacionCreateUpdateHeading"
+        jhiTranslate="jhipsterBancoGermoplasmaApp.ubicacion.home.createOrEditLabel"
+      >
+        Crear o editar Ubicacion
+      </h2>
+
+      <div>
+        <jhi-alert-error></jhi-alert-error>
+
+        <div class="row mb-3" *ngIf="editForm.controls.id.value !== null">
+          <label class="form-label" jhiTranslate="global.field.id" for="field_id">ID</label>
+          <input type="number" class="form-control" name="id" id="field_id" data-cy="id" formControlName="id" [readonly]="true" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="jhipsterBancoGermoplasmaApp.ubicacion.callePrincipal" for="field_callePrincipal"
+            >Calle Principal</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="callePrincipal"
+            id="field_callePrincipal"
+            data-cy="callePrincipal"
+            formControlName="callePrincipal"
+          />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="jhipsterBancoGermoplasmaApp.ubicacion.calleSecundaria" for="field_calleSecundaria"
+            >Calle Secundaria</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="calleSecundaria"
+            id="field_calleSecundaria"
+            data-cy="calleSecundaria"
+            formControlName="calleSecundaria"
+          />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="jhipsterBancoGermoplasmaApp.ubicacion.latitud" for="field_latitud">Latitud</label>
+          <input type="text" class="form-control" name="latitud" id="field_latitud" data-cy="latitud" formControlName="latitud" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="jhipsterBancoGermoplasmaApp.ubicacion.altitud" for="field_altitud">Altitud</label>
+          <input type="text" class="form-control" name="altitud" id="field_altitud" data-cy="altitud" formControlName="altitud" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="jhipsterBancoGermoplasmaApp.ubicacion.longitud" for="field_longitud">Longitud</label>
+          <input type="text" class="form-control" name="longitud" id="field_longitud" data-cy="longitud" formControlName="longitud" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="jhipsterBancoGermoplasmaApp.ubicacion.parroquia" for="field_parroquia">Parroquia</label>
+          <select
+            class="form-control"
+            id="field_parroquia"
+            data-cy="parroquia"
+            name="parroquia"
+            formControlName="parroquia"
+            [compareWith]="compareParroquia"
+          >
+            <option [ngValue]="null"></option>
+            <option [ngValue]="parroquiaOption" *ngFor="let parroquiaOption of parroquiasSharedCollection">{{ parroquiaOption.id }}</option>
+          </select>
+        </div>
+      </div>
+
+      <div>
+        <button type="button" id="cancel-save" data-cy="entityCreateCancelButton" class="btn btn-secondary" (click)="previousState()">
+          <fa-icon icon="ban"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancelar</span>
+        </button>
+
+        <button
+          type="submit"
+          id="save-entity"
+          data-cy="entityCreateSaveButton"
+          [disabled]="editForm.invalid || isSaving"
+          class="btn btn-primary"
+        >
+          <fa-icon icon="save"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Guardar</span>
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

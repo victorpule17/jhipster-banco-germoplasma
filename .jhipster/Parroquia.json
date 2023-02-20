@@ -1,0 +1,26 @@
+{
+  "applications": "*",
+  "changelogDate": "20230220003656",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "parroquia",
+  "fields": [
+    {
+      "fieldName": "nombreParroquia",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Parroquia",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "canton",
+      "relationshipName": "canton",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "no"
+}

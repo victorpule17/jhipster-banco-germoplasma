@@ -1,0 +1,34 @@
+{
+  "applications": "*",
+  "changelogDate": "20230220003658",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "planta",
+  "fields": [
+    {
+      "fieldName": "nombre",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "estado",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "uso",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Planta",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "ubicacion",
+      "relationshipName": "ubicacion",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "no"
+}

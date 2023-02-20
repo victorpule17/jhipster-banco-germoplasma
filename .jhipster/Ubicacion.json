@@ -1,0 +1,42 @@
+{
+  "applications": "*",
+  "changelogDate": "20230220003657",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "ubicacion",
+  "fields": [
+    {
+      "fieldName": "callePrincipal",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "calleSecundaria",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "latitud",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "altitud",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "longitud",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Ubicacion",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "parroquia",
+      "relationshipName": "parroquia",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "no"
+}

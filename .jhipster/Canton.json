@@ -1,0 +1,26 @@
+{
+  "applications": "*",
+  "changelogDate": "20230220003655",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "canton",
+  "fields": [
+    {
+      "fieldName": "nombreCanton",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Canton",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "provincia",
+      "relationshipName": "provincia",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "no"
+}

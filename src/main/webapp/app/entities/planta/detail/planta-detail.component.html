@@ -1,0 +1,46 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <div *ngIf="planta">
+      <h2 data-cy="plantaDetailsHeading"><span jhiTranslate="jhipsterBancoGermoplasmaApp.planta.detail.title">Planta</span></h2>
+
+      <hr />
+
+      <jhi-alert-error></jhi-alert-error>
+
+      <jhi-alert></jhi-alert>
+
+      <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="global.field.id">ID</span></dt>
+        <dd>
+          <span>{{ planta.id }}</span>
+        </dd>
+        <dt><span jhiTranslate="jhipsterBancoGermoplasmaApp.planta.nombre">Nombre</span></dt>
+        <dd>
+          <span>{{ planta.nombre }}</span>
+        </dd>
+        <dt><span jhiTranslate="jhipsterBancoGermoplasmaApp.planta.estado">Estado</span></dt>
+        <dd>
+          <span>{{ planta.estado }}</span>
+        </dd>
+        <dt><span jhiTranslate="jhipsterBancoGermoplasmaApp.planta.uso">Uso</span></dt>
+        <dd>
+          <span>{{ planta.uso }}</span>
+        </dd>
+        <dt><span jhiTranslate="jhipsterBancoGermoplasmaApp.planta.ubicacion">Ubicacion</span></dt>
+        <dd>
+          <div *ngIf="planta.ubicacion">
+            <a [routerLink]="['/ubicacion', planta.ubicacion.id, 'view']">{{ planta.ubicacion.id }}</a>
+          </div>
+        </dd>
+      </dl>
+
+      <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+        <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Volver</span>
+      </button>
+
+      <button type="button" [routerLink]="['/planta', planta.id, 'edit']" class="btn btn-primary">
+        <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Editar</span>
+      </button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,38 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <div *ngIf="parroquia">
+      <h2 data-cy="parroquiaDetailsHeading"><span jhiTranslate="jhipsterBancoGermoplasmaApp.parroquia.detail.title">Parroquia</span></h2>
+
+      <hr />
+
+      <jhi-alert-error></jhi-alert-error>
+
+      <jhi-alert></jhi-alert>
+
+      <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="global.field.id">ID</span></dt>
+        <dd>
+          <span>{{ parroquia.id }}</span>
+        </dd>
+        <dt><span jhiTranslate="jhipsterBancoGermoplasmaApp.parroquia.nombreParroquia">Nombre Parroquia</span></dt>
+        <dd>
+          <span>{{ parroquia.nombreParroquia }}</span>
+        </dd>
+        <dt><span jhiTranslate="jhipsterBancoGermoplasmaApp.parroquia.canton">Canton</span></dt>
+        <dd>
+          <div *ngIf="parroquia.canton">
+            <a [routerLink]="['/canton', parroquia.canton.id, 'view']">{{ parroquia.canton.id }}</a>
+          </div>
+        </dd>
+      </dl>
+
+      <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+        <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Volver</span>
+      </button>
+
+      <button type="button" [routerLink]="['/parroquia', parroquia.id, 'edit']" class="btn btn-primary">
+        <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Editar</span>
+      </button>
+    </div>
+  </div>
+</div>

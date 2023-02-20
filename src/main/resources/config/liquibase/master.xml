@@ -17,7 +17,18 @@
     <property name="datetimeType" value="datetime" dbms="postgresql"/>
 
     <include file="config/liquibase/changelog/00000000000000_initial_schema.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20230220003653_added_entity_Pais.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20230220003654_added_entity_Provincia.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20230220003655_added_entity_Canton.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20230220003656_added_entity_Parroquia.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20230220003657_added_entity_Ubicacion.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20230220003658_added_entity_Planta.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-changelog - JHipster will add liquibase changelogs here -->
+    <include file="config/liquibase/changelog/20230220003654_added_entity_constraints_Provincia.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20230220003655_added_entity_constraints_Canton.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20230220003656_added_entity_constraints_Parroquia.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20230220003657_added_entity_constraints_Ubicacion.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20230220003658_added_entity_constraints_Planta.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-constraints-changelog - JHipster will add liquibase constraints changelogs here -->
     <!-- jhipster-needle-liquibase-add-incremental-changelog - JHipster will add incremental liquibase changelogs here -->
 </databaseChangeLog>

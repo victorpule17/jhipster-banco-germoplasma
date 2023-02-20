@@ -1,0 +1,26 @@
+{
+  "applications": "*",
+  "changelogDate": "20230220003654",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "provincia",
+  "fields": [
+    {
+      "fieldName": "nombreProvincia",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Provincia",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "pais",
+      "relationshipName": "pais",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "no"
+}
